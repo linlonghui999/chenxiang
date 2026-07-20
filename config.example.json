@@ -1,0 +1,43 @@
+{
+  "vault_path": "C:\\path\\to\\your\\Obsidian Vault",
+  "output_folder": "沉香信息库",
+  "max_items_per_source": 20,
+  "minimum_relevance_score": 1,
+  "sources": [
+    {
+      "name": "必应新闻-沉香",
+      "type": "rss",
+      "url": "https://www.bing.com/news/search?q=%E6%B2%89%E9%A6%99&format=rss"
+    },
+    {
+      "name": "必应新闻-奇楠",
+      "type": "rss",
+      "url": "https://www.bing.com/news/search?q=%E5%A5%87%E6%A5%A0+%E6%B2%89%E9%A6%99&format=rss"
+    },
+    {
+      "name": "必应新闻-沉香文化",
+      "type": "rss",
+      "url": "https://www.bing.com/news/search?q=%E6%B2%89%E9%A6%99%E6%96%87%E5%8C%96&format=rss"
+    },
+    {
+      "name": "必应新闻-沉香市场",
+      "type": "rss",
+      "url": "https://www.bing.com/news/search?q=%E6%B2%89%E9%A6%99%E5%B8%82%E5%9C%BA&format=rss"
+    },
+    {
+      "name": "PubMed-沉香科研",
+      "type": "pubmed",
+      "query": "agarwood OR Aquilaria"
+    }
+  ],
+  "keywords": [
+    "沉香",
+    "奇楠",
+    "棋楠",
+    "莞香",
+    "沉水香",
+    "Aquilaria",
+    "agarwood",
+    "oud"
+  ]
+}

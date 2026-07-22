@@ -164,6 +164,17 @@ TOPIC_ANGLES = {
 
 def relevance_score(item: Item, keywords: list[str]) -> int:
     haystack = f"{item.title} {item.summary}".lower()
+    entertainment_terms = [
+        "沉香如屑",
+        "沉香重华",
+        "杨紫",
+        "成毅",
+        "陆剧",
+        "电视剧",
+        "剧集",
+    ]
+    if any(term.lower() in haystack for term in entertainment_terms):
+        return 0
     strong_terms = ["沉香", "棋楠", "莞香", "沉水香", "aquilaria", "agarwood", "oud"]
     qinan_context = ["香", "木", "收藏", "产业", "产区", "手串", "文玩", "结香", "原料"]
     has_strong_term = any(term in haystack for term in strong_terms)

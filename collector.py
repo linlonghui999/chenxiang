@@ -17,8 +17,15 @@ from html.parser import HTMLParser
 from pathlib import Path
 from typing import Iterable
 
+from opencc import OpenCC
+
 
 USER_AGENT = "ChenxiangCollector/1.0 (+https://github.com/linlonghui999/chenxiang)"
+SIMPLIFIER = OpenCC("t2s")
+
+
+def to_simplified(value: str) -> str:
+    return SIMPLIFIER.convert(value or "")
 
 
 @dataclass
@@ -94,7 +101,7 @@ def collect_rss(source: dict, limit: int) -> list[Item]:
         summary = clean_html(child_text(node, ["description", "summary", "content", "encoded"]))
         published = normalize_date(child_text(node, ["pubDate", "published", "updated", "date"]))
         if title and url:
-            items.append(Item(title, url, source["name"], published, summary))
+            items.append(Item(to_simplified(title), url, to_simplified(source["name"]), published, to_simplified(summary)))
     return items
 
 
@@ -119,16 +126,16 @@ def collect_pubmed(source: dict, limit: int) -> list[Item]:
     items: list[Item] = []
     for pubmed_id in ids:
         record = result.get(pubmed_id, {})
-        title = clean_html(record.get("title", ""))
+        title = to_simplified(clean_html(record.get("title", "")))
         authors = ", ".join(a.get("name", "") for a in record.get("authors", [])[:5])
         journal = record.get("fulljournalname") or record.get("source", "")
-        summary = "；".join(part for part in [authors, journal] if part)
+        summary = to_simplified("；".join(part for part in [authors, journal] if part))
         if title:
             items.append(
                 Item(
                     title=title,
                     url=f"https://pubmed.ncbi.nlm.nih.gov/{pubmed_id}/",
-                    source=source["name"],
+                    source=to_simplified(source["name"]),
                     published=record.get("pubdate", ""),
                     summary=summary,
                 )

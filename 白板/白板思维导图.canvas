@@ -1,0 +1,17 @@
+{
+	"nodes":[
+		{"id":"8d61296f91952cb9","type":"text","text":"自己收集的信息","x":-200,"y":-500,"width":161,"height":60},
+		{"id":"76b6943163108e7b","type":"text","text":"外部信息来源（自媒体）","x":-15,"y":-500,"width":249,"height":50,"color":"#26cf8e"},
+		{"id":"56d3d607a7dff415","type":"text","text":"信息汇集处","x":-98,"y":-380,"width":155,"height":60,"color":"6"},
+		{"id":"9577543ec2acd256","type":"text","text":"信息分类（沉香行业，自媒体，ai，修行）","x":-145,"y":-260,"width":379,"height":60,"color":"2"},
+		{"id":"6f0f6e2d053a197e","type":"text","text":"分别整理归纳（分析，结构，核心，总结，学到什么或用处）","x":-133,"y":-140,"width":343,"height":60},
+		{"id":"f8bcea6aa9bf2b9c","type":"file","file":"笔记测试文件/林龙辉.md","x":-74,"y":0,"width":225,"height":250}
+	],
+	"edges":[
+		{"id":"9e9d51e2b7499589","fromNode":"76b6943163108e7b","fromSide":"bottom","toNode":"56d3d607a7dff415","toSide":"top"},
+		{"id":"a5f7b42a8402a79d","fromNode":"8d61296f91952cb9","fromSide":"bottom","toNode":"56d3d607a7dff415","toSide":"top"},
+		{"id":"fd7a8dea2dc06ecd","fromNode":"56d3d607a7dff415","fromSide":"bottom","toNode":"9577543ec2acd256","toSide":"top"},
+		{"id":"510dad059c59997c","fromNode":"9577543ec2acd256","fromSide":"bottom","toNode":"6f0f6e2d053a197e","toSide":"top"},
+		{"id":"7ed468a7e746208a","fromNode":"6f0f6e2d053a197e","fromSide":"bottom","toNode":"f8bcea6aa9bf2b9c","toSide":"top"}
+	]
+}

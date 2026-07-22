@@ -1,0 +1,31 @@
+filters:
+  and:
+    - 'file.ext == "md"'
+    - or:
+        - 'type == "source"'
+        - 'type == "evergreen"'
+properties:
+  file.name:
+    displayName: 笔记
+  domain:
+    displayName: 领域
+  category:
+    displayName: 分类
+  maturity:
+    displayName: 成熟度
+  status:
+    displayName: 状态
+  file.links:
+    displayName: 正向链接
+views:
+  - type: table
+    name: 按成熟度查看
+    groupBy:
+      property: maturity
+      direction: ASC
+    order:
+      - file.name
+      - domain
+      - category
+      - maturity
+      - status

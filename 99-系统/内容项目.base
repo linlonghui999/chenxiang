@@ -1,0 +1,30 @@
+filters:
+  and:
+    - 'file.ext == "md"'
+    - 'type == "project"'
+properties:
+  file.name:
+    displayName: 项目
+  domain:
+    displayName: 领域
+  format:
+    displayName: 形式
+  audience:
+    displayName: 受众
+  status:
+    displayName: 状态
+  file.mtime:
+    displayName: 最后修改
+views:
+  - type: table
+    name: 内容项目
+    groupBy:
+      property: status
+      direction: ASC
+    order:
+      - file.name
+      - domain
+      - format
+      - audience
+      - status
+      - file.mtime

@@ -4,3 +4,23 @@ data/
 __pycache__/
 *.pyc
 
+# Obsidian local state
+.obsidian/workspace
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache/
+.trash/
+
+# Claudian/Codex local session state
+.claudian/
+
+# Local AI provider credentials and backups
+.obsidian/plugins/deepseek-ai-assistant/data.json
+.obsidian/plugins/deepseek-ai-assistant/data.json.backup-*
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+~$*
+

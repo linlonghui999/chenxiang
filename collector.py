@@ -236,7 +236,12 @@ published: {yaml_quote(item.published)}
 collected: {yaml_quote(collected_at)}
 category: {yaml_quote(category)}
 relevance: {score}
-status: {yaml_quote('待阅读')}
+type: {yaml_quote('source')}
+domain: {yaml_quote('沉香')}
+status: {yaml_quote('待提炼')}
+maturity: {yaml_quote('seed')}
+up: {yaml_quote('[[02-主题地图/沉香 MOC]]')}
+map: {yaml_quote(f'[[02-主题地图/沉香/沉香-{category} MOC]]')}
 tags:
   - 沉香信息
   - {category}
@@ -247,6 +252,12 @@ tags:
 ## 信息摘要
 
 {summary}
+
+## 知识连接
+
+- 主题入口：[[02-主题地图/沉香 MOC|沉香 MOC]]，用于回到沉香知识全景。
+- 分类地图：[[02-主题地图/沉香/沉香-{category} MOC|{category}地图]]，因为本资料归入“{category}”。
+- 提炼动作：抽取一个可复用观点，补充证据、边界和关联笔记。
 
 ## 可用选题方向
 
